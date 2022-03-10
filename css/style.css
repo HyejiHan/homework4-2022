@@ -6,10 +6,13 @@ body{
 
 header{
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .nav_links{
   display: flex;
+  flex-direction: column;
 }
 
 a:visited {
@@ -34,12 +37,13 @@ a:visited {
 
 .pricing{
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
 .card{
-  flex-basis: 450px;
+  width: 450px;
 }
 
 .gallery img{
@@ -66,21 +70,31 @@ a:visited {
 @media screen and (min-width: 900px){
   header{
     justify-content: space-between;
+    flex-direction: row;
     align-items: center;
   }
 
   .nav_links{
     align-items: center;
+    flex-direction: row;
+  }
+
+  .pricing{
+    flex-direction: row;
   }
 
   .card{
     flex-basis: 250px;
-    
   }
 
   body > header{
-    position: fixed;
     width: 100%;
+    position: fixed;
+    top: 0;
+  }
+
+  body {
+    margin-top: 100px;
   }
 }
 
@@ -112,10 +126,14 @@ a:visited {
 
   .nav_links{
     justify-content: space-around;
+    flex-direction: row;
   }
 
   .pricing{
+    flex-direction: row;
+    /* justify-content: center; */
     align-items: flex-end;
+
   }
 
   .card{
